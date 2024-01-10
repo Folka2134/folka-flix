@@ -1,3 +1,4 @@
+import SearchBar from "@/components/SearchBar";
 import Navbar from "@/components/shared/Navbar";
 
 export default function RootLayout({
@@ -6,9 +7,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex h-screen flex-col">
+    <div className="flex min-h-screen flex-col lg:flex-row">
       <Navbar />
-      <main className="flex-1">{children}</main>
+      <div className="w-full p-6">
+        <SearchBar />
+        <main className="flex-1">{children}</main>
+      </div>
       {/* <Footer /> */}
     </div>
   );

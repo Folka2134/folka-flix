@@ -9,28 +9,28 @@ import { BookmarkIcon } from "@heroicons/react/24/solid";
 
 const Navbar = () => {
   return (
-    <header className="w-full border-b">
-      <div className="wrapper flex h-20 items-center justify-between bg-[#161D2F] px-6">
+    <header className="w-full md:p-6 lg:w-auto">
+      <div className="flex items-center justify-between bg-[#161D2F] px-5 py-4 md:rounded-lg lg:h-3/4 lg:flex-col lg:justify-start lg:px-5 lg:py-6">
         <Link href="/">
           <FilmIcon className="h-10 w-10 fill-[#FD4746]" />
         </Link>
 
-        <nav className="flex w-full items-center justify-center gap-5">
+        <nav className="flex w-full items-center justify-center gap-7 lg:mt-14 lg:flex-col">
           <Link href="/">
-            <Squares2X2Icon className="h-8 w-8 fill-[#5B6990] transition-colors duration-200 hover:fill-white" />
+            <Squares2X2Icon className="h-7 w-7 fill-[#5B6990] transition-colors duration-200 hover:fill-white" />
           </Link>
           <Link href="/">
-            <FilmIcon className="h-8 w-8 fill-[#5B6990] transition-colors duration-200 hover:fill-white" />
+            <FilmIcon className="h-7 w-7 fill-[#5B6990] transition-colors duration-200 hover:fill-white" />
           </Link>
           <Link href="/">
-            <TvIcon className="h-8 w-8 fill-[#5B6990] transition-colors duration-200 hover:fill-white" />
+            <TvIcon className="h-7 w-7 fill-[#5B6990] transition-colors duration-200 hover:fill-white" />
           </Link>
           <Link href="/">
-            <BookmarkIcon className="h-8 w-8 fill-[#5B6990] transition-colors duration-200 hover:fill-white" />
+            <BookmarkIcon className="h-7 w-7 fill-[#5B6990] transition-colors duration-200 hover:fill-white" />
           </Link>
         </nav>
 
-        <div className="flex justify-end gap-3">
+        <div className="flex justify-end gap-3 lg:mt-auto">
           <SignedIn>
             <UserButton afterSignOutUrl="/" />
           </SignedIn>
