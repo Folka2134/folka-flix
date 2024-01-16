@@ -1,12 +1,19 @@
 import MediaList from "@/components/MediaList";
-import Navbar from "@/components/shared/Navbar";
-import Image from "next/image";
+import { trending } from "@/constants";
+import {
+  getDataFromApi,
+  getTrendingFromApi,
+} from "@/lib/actions/media.actions";
 
-export default function Home() {
+export default async function Home() {
+  // const movies = await getDataFromApi();
+  // const trending = await getTrendingFromApi();
+
   return (
     <main className="flex min-h-screen flex-col justify-between">
       <div>
-        <MediaList />
+        {/* <MediaList media={movies.results} title="movies" /> */}
+        <MediaList media={trending.results} title="Trending" />
       </div>
     </main>
   );

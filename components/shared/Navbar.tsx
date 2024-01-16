@@ -19,13 +19,13 @@ const Navbar = () => {
           <Link href="/">
             <Squares2X2Icon className="h-7 w-7 fill-[#5B6990] transition-colors duration-200 hover:fill-white" />
           </Link>
-          <Link href="/">
+          <Link href="/movies">
             <FilmIcon className="h-7 w-7 fill-[#5B6990] transition-colors duration-200 hover:fill-white" />
           </Link>
-          <Link href="/">
+          <Link href="/shows">
             <TvIcon className="h-7 w-7 fill-[#5B6990] transition-colors duration-200 hover:fill-white" />
           </Link>
-          <Link href="/">
+          <Link href="/bookmarks">
             <BookmarkIcon className="h-7 w-7 fill-[#5B6990] transition-colors duration-200 hover:fill-white" />
           </Link>
         </nav>

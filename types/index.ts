@@ -15,6 +15,18 @@ export type UpdateUserParams = {
   photo: string
 }
 
+// PROFILE PARAMS
+export type CreateBookmarkParams = {
+  userId: string
+  mediaId: number
+}
+
+export type DeleteBookmarkParams = {
+  userId: string
+  mediaId: string
+}
+
+
 // ====== EVENT PARAMS
 export type CreateEventParams = {
   userId: string

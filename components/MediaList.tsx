@@ -1,15 +1,19 @@
 import React from "react";
 import MediaCard from "./MediaCard";
+import { IMedia } from "@/lib/database/models/media.model";
 
-const mockItems = [1, 2, 3, 4, 5];
+type MediaListProps = {
+  media: IMedia[];
+  title: string;
+};
 
-const MediaList = () => {
+const MediaList = ({ media, title }: MediaListProps) => {
   return (
     <>
-      <h2 className="my-5 text-3xl">List title</h2>
-      <div className="grid grid-cols-2 gap-10 md:grid-cols-3 lg:flex lg:flex-wrap">
-        {mockItems.map((item) => (
-          <MediaCard />
+      <h2 className="my-5 text-3xl">{title}</h2>
+      <div className="flex flex-wrap justify-center gap-10 lg:justify-start">
+        {media.map((item) => (
+          <MediaCard key={item.id} data={item} />
         ))}
       </div>
     </>
